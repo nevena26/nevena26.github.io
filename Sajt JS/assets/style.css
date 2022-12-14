@@ -1,0 +1,801 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #eee;
+}
+
+#cistac {
+  clear: both;
+}
+
+@media only screen and (max-width: 700px) {
+  #header {
+    background-color: #ffe6e6;
+    color: black;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #header h2 {
+    font-family: "Shadows Into Light";
+    font-size: 38px;
+  }
+
+  #header p {
+    font-family: "Josefin Slab";
+    font-size: 20px;
+  }
+
+  #menu ul {
+    display: flex;
+  }
+
+  #menu2 ul {
+    display: flex;
+  }
+
+  #menu ul li {
+    list-style-type: none;
+    font-family: "Josefin Slab";
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  #menu2 ul li {
+    list-style-type: none;
+    font-family: "Josefin Slab";
+    font-size: 23px;
+  }
+
+  #menu2 a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #menu a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #menu a:hover {
+    font-size: 29px;
+    -webkit-transition: all 1s ease;
+    transition: 1s ease;
+  }
+}
+@media only screen and (min-width: 700px) {
+  #header {
+    background-color: #ffe6e6;
+    color: black;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #header h2 {
+    font-family: "Shadows Into Light";
+    font-size: 38px;
+  }
+
+  #header p {
+    font-family: "Josefin Slab";
+    font-size: 20px;
+  }
+
+  #menu ul {
+    display: flex;
+    gap: 20%;
+  }
+
+  #menu2 ul {
+    display: flex;
+    gap: 20%;
+  }
+
+  #menu ul li {
+    list-style-type: none;
+    font-family: "Josefin Slab";
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  #menu2 ul li {
+    list-style-type: none;
+    font-family: "Josefin Slab";
+    font-size: 23px;
+  }
+
+  #menu2 a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #menu a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #menu a:hover {
+    font-size: 29px;
+    -webkit-transition: all 1s ease;
+    transition: 1s ease;
+  }
+}
+#cover img {
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin-top: -55px;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  margin-top: 0px;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide > img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  margin-left: 330px;
+  margin-right: 330px;
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 0 0.8rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+#aboutUs h1 {
+  color: grey;
+  font-family: "Josefin Slab";
+
+  font-size: 40px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 2px;
+  width: 45%;
+  text-align: center;
+  margin-left: 30%;
+}
+
+#aboutUs p {
+  color: grey;
+  font-family: "Josefin Slab";
+  margin-top: 50px;
+  font-size: 30px;
+  width: 70%;
+  text-align: center;
+  margin-left: 14%;
+}
+
+#block2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+
+.btn1 {
+  position: relative;
+  display: inline-flex;
+  padding: 10px 30px;
+  background: grey;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+  -webkit-transition: background-color 1s linear;
+}
+
+.info {
+  width: 19%;
+  margin-top: 0;
+  padding: 2%;
+  border: 1px solid grey;
+  border-radius: 50%;
+  font-size: 24px;
+  font-family: "Josefin Slab";
+  text-align: center;
+  margin-left: -22%;
+  margin-right: -22%;
+}
+
+.info:hover {
+  -webkit-transition: all 1s ease;
+  transition: 1s ease;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info p {
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+.info h3 {
+  font-size: 28px;
+  padding: 5%;
+}
+
+.info i {
+  font-size: 30px;
+}
+
+/* FORM VALIDATION */
+
+#formular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#formular h4 {
+  position: relative;
+  font-size: 32px;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  font-family: "Josefin Slab";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+#form {
+  position: relative;
+  margin-top: 30px;
+  background-color: #ffe6e6;
+  height: auto;
+  width: 600px;
+  border-radius: 25px;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.17);
+}
+
+#form #fullName {
+  width: 450px;
+  height: 50px;
+  background: #d1e0e0;
+  outline: none;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  color: grey;
+  font-style: 18px;
+  margin-left: 14%;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.17);
+}
+
+#form #inputBox1 {
+  position: relative;
+}
+
+#form #email {
+  width: 450px;
+  height: 50px;
+  background: #d1e0e0;
+  outline: none;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  color: grey;
+  margin-top: 20px;
+  margin-left: 14%;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Josefin Slab";
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.17);
+}
+
+#form #inputBox2 {
+  position: relative;
+  margin-left: 14%;
+}
+
+#form #inputBox3 {
+  width: 450px;
+  height: 150px;
+  margin-top: 40px;
+  background: #d1e0e0;
+  outline: none;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  color: grey;
+  font-style: 18px;
+  margin-left: 14%;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.17);
+  position: relative;
+  margin-left: 14%;
+  background-color: #d1e0e0;
+}
+
+#messages p {
+  margin-left: 14%;
+  margin-top: 60px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 22px;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  width: 250px;
+  padding-bottom: 2px;
+  color: #76a2a2;
+}
+
+#text1 {
+  display: block;
+  color: #000;
+  font-weight: 300;
+  font-style: italic;
+  padding: 15px;
+  font-weight: bold;
+  margin-left: 14%;
+  font-family: "Josefin Slab";
+  font-size: 18px;
+}
+
+#text2 {
+  display: block;
+  color: #000;
+  font-weight: 300;
+  font-style: italic;
+  padding: 15px;
+  font-weight: bold;
+  margin-left: 14%;
+  font-family: "Josefin Slab";
+  font-size: 20px;
+}
+
+#text3 {
+  display: block;
+  color: #000;
+  font-weight: 500;
+  font-style: italic;
+  padding: 15px;
+  font-weight: bold;
+  margin-left: 13%;
+  font-size: 16px;
+  font-family: "Josefin Slab";
+  font-size: 20px;
+  margin-bottom: 48px;
+}
+
+#radio1 {
+  margin-top: 25px;
+  margin-left: 14%;
+}
+
+#radio2 {
+  margin-top: 13px;
+  margin-left: 14%;
+}
+
+#radios p {
+  font-size: 22px;
+  margin-left: 14%;
+  margin-top: 48px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  width: 200px;
+  color: #76a2a2;
+}
+
+#radios label {
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#dropdown label {
+  color: #76a2a2;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 21px;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  margin-left: 14%;
+}
+
+#services {
+  margin-top: 23px;
+  margin-left: 14%;
+  width: 185px;
+  height: 35px;
+  border-radius: 25px;
+  padding-left: 15px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.17);
+}
+
+#submitBtn {
+  margin-top: 55px;
+  margin-bottom: 40px;
+  width: 130px;
+  height: 60px;
+  font-size: 20px;
+  font-family: "Josefin Slab";
+  border-radius: 25px;
+  font-weight: bold;
+  border: 3px solid #d1e0e0;
+  cursor: pointer;
+  margin-left: 40%;
+  color: grey;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.17);
+}
+
+#backgroundAuthor {
+  background-color: black;
+}
+
+#autor {
+  display: flex;
+  align-items: center;
+  margin-left: 17%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: #d1e0e0;
+  width: 70%;
+  background-image: linear-gradient(#ffe6e6, #e6fff7);
+}
+
+#authorImage img {
+  width: 70%;
+  padding: 30px;
+  margin-left: 40px;
+}
+
+.readMore {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 10%;
+  margin-left: -5%;
+  width: 50%;
+  font-size: 23px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  color: #333333;
+}
+
+#read-btn {
+  margin-top: 30px;
+  width: 110px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Josefin Slab";
+  border-radius: 25px;
+  font-weight: bold;
+  border: 3px solid #d1e0e0;
+  cursor: pointer;
+  color: grey;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.17);
+}
+
+#more {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 260px;
+  padding-top: 140px;
+  margin-top: 60px;
+}
+.card {
+  position: relative;
+  width: 408px;
+  padding-bottom: 50px;
+  background-color: #fff;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+}
+.card .text {
+  padding: 20px;
+}
+.card p {
+  font-size: 18px;
+  line-height: 30px;
+}
+.card h2 {
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+.card .more-btn {
+  width: 100px;
+  height: 100px;
+  background-color: lightpink;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  cursor: pointer;
+  z-index: 9;
+  font-size: 20px;
+  transition: all ease 0.5s;
+}
+.card .more-btn:hover {
+  background-color: grey;
+  color: white;
+}
+.more-text {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d1e0e0;
+  padding: 30px;
+  overflow-y: auto;
+  transition: all ease 0.7s;
+}
+
+.more-text h2 {
+  color: black;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.more-text p {
+  padding-top: 20px;
+  color: grey;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.more-text.active {
+  bottom: 0;
+}
+.gallery {
+  min-height: 100vh;
+  background: #eee;
+  padding-bottom: 100px;
+  margin-top: 40px;
+}
+
+.gallery .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.gallery .controls .buttons {
+  height: 40px;
+  width: 140px;
+  background: #fff;
+  color: #666;
+  font-size: 20px;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 20px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: "Josefin Slab";
+}
+
+.gallery .controls .buttons.active {
+  background: #e6fff7;
+  color: grey;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+}
+
+.gallery .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery .image-container .image {
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  border: 15px solid #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+
+.gallery .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery .image-container .image:hover img {
+  transform: scale(1.4);
+}
+.controls {
+  text-transform: capitalize;
+}
+
+#mapa {
+  margin-left: 36%;
+  margin-top: -5%;
+  margin-bottom: 8%;
+}
+
+#mapa h3 {
+  background-color: #d1e0e0;
+  margin-bottom: 4%;
+  font-size: 40px;
+  margin-left: 7%;
+  width: 34%;
+  font-family: "Josefin Slab";
+  color: #404040;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2%;
+  border-radius: 25px;
+}
+
+.to-top {
+  background: #d1e0e0;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#footer {
+  width: 100%;
+  height: 90px;
+  background-color: #ffe6e6;
+}
+
+#copyright {
+  font-size: 20px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  float: left;
+  padding-top: 2%;
+  padding-left: 4%;
+  color: #404040;
+}
+
+#adresa {
+  font-size: 20px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  float: right;
+  padding-top: 2%;
+  padding-right: 4%;
+  color: #404040;
+}
+
+#dokumentacija {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+#dokumentacija a {
+  color: grey;
+  font-size: 25px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+}

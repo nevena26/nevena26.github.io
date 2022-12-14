@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Slab" />
+    <title>Beauvia</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="interior design, furniture, home, service" />
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
+    <script
+      src="https://kit.fontawesome.com/38af01aea7.js"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="company">
+        <h2>BEAUVIA</h2>
+        <p>Interior Design Service</p>
+      </div>
+      <div id="menu"></div>
+      <div id="menu2">
+        <ul class="social">
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.viber.com/" target="_blank">
+              <i class="fa-brands fa-viber"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.whatsapp.com/" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="cistac"></div>
+    <div class="gallery">
+      <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="livingroom">living room</li>
+        <li class="buttons" data-filter="bathroom">bathroom</li>
+        <li class="buttons" data-filter="bedroom">bedroom</li>
+
+        <li class="buttons" data-filter="kitchen">kitchen</li>
+      </ul>
+
+      <div class="image-container">
+        <a href="images/livingroom1.jpg" class="image livingroom">
+          <img src="images/livingroom1.jpg" alt="livingroom1" />
+        </a>
+        <a href="images/livingroom2.jpg" class="image livingroom">
+          <img src="images/livingroom2.jpg" alt="livingroom2" />
+        </a>
+        <a href="images/livingroom3.jpg" class="image livingroom">
+          <img src="images/livingroom3.jpg" alt="livingroom3" />
+        </a>
+
+        <a href="images/bathroom1.jpg" class="image bathroom">
+          <img src="images/bathroom1.jpg" alt="bathroom1" />
+        </a>
+        <a href="images/bathroom2.jpg" class="image bathroom">
+          <img src="images/bathroom2.jpg" alt="bathroom2" />
+        </a>
+
+        <a href="images/bedroom1.jpg" class="image bedroom">
+          <img src="images/bedroom1.jpg" alt="bedroom1" />
+        </a>
+        <a href="images/bedroom2.jpg" class="image bedroom">
+          <img src="images/bedroom2.jpg" alt="bedroom2" />
+        </a>
+        <a href="images/bedroom3.jpg" class="image bedroom">
+          <img src="images/bedroom3.jpg" alt="bedroom3" />
+        </a>
+        <a href="images/bedroom4.jpg" class="image bedroom">
+          <img src="images/bedroom4.jpg" alt="bedroom4" />
+        </a>
+        <a href="images/bedroom5.jpg" class="image bedroom">
+          <img src="images/bedroom5.jpg" alt="bedroom5" />
+        </a>
+
+        <a href="images/kitchen1.jpg" class="image kitchen">
+          <img src="images/kitchen1.jpg" alt="kitchen1" />
+        </a>
+        <a href="images/kitchen2.jpg" class="image kitchen">
+          <img src="images/kitchen2.jpg" alt="kitchen2" />
+        </a>
+        <a href="images/kitchen3.jpg" class="image kitchen">
+          <img src="images/kitchen3.jpg" alt="kitchen3" />
+        </a>
+        <a href="images/kitchen4.jpg" class="image kitchen">
+          <img src="images/kitchen4.jpg" alt="kitchen4" />
+        </a>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="copyright">
+        <p>Beauvia &#174;. All rights reserved.</p>
+      </div>
+      <div id="adresa">
+        <p>ICT College, Zdravka Celara 16, Belgrade</p>
+      </div>
+    </div>
+
+    <script src="assets/main.js"></script>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- magnific popup js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".buttons").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+
+          var filter = $(this).attr("data-filter");
+
+          if (filter == "all") {
+            $(".image").show(400);
+          } else {
+            $(".image")
+              .not("." + filter)
+              .hide(200);
+            $(".image")
+              .filter("." + filter)
+              .show(400);
+          }
+        });
+
+        $(".gallery").magnificPopup({
+          delegate: "a",
+          type: "image",
+          gallery: {
+            enabled: true,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

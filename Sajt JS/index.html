@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="assets/main.js" defer></script>
+    <link rel="stylesheet" href="assets/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="interior design, furniture, home, service" />
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/38af01aea7.js"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Slab" />
+    <title>Beauvia</title>
+  </head>
+  <body>
+    <div id="header">
+      <div id="company">
+        <h2>BEAUVIA</h2>
+        <p>Interior Design Service</p>
+      </div>
+      <div id="menu"></div>
+      <div id="menu2">
+        <ul class="social">
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.viber.com/" target="_blank">
+              <i class="fa-brands fa-viber"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.whatsapp.com/" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="cistac"></div>
+    <section aria-label="Photos">
+      <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">
+          &#8678;
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          &#8680;
+        </button>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <img src="images/1.jpg" alt="Image 1" />
+          </li>
+          <li class="slide">
+            <img src="images/vase.jpg" alt="Image 2" />
+          </li>
+          <li class="slide">
+            <img src="images/green.jpg" alt="Image 3" />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div id="cistac"></div>
+    <div id="aboutUs">
+      <h1>Everything you need for your home, in one place.</h1>
+      <p>
+        Beauvia is a Interior Design company that provides you an opportunity to
+        have your dream home or design preview of what you desire. Within a few
+        clicks, you can take a look at our work, our satisfied customers or even
+        contact us for more details.
+      </p>
+    </div>
+    <div id="block2">
+      <div class="info">
+        <i class="fa-regular fa-paper-plane"></i>
+        <br />
+        <h3>Easy to book!</h3>
+        <p>
+          You can contact us via form at our website and our support team will
+          reply to you in no time.
+        </p>
+        <a href="#formular" class="btn1"><span> Contact </span></a>
+      </div>
+      <div class="info">
+        <i class="fa-regular fa-map"></i>
+        <br />
+        <h3>Want to visit?</h3>
+        <p>
+          Our location is also listed on our website. You are welcome to visit
+          us and consult us in person.
+        </p>
+        <a href="#mapa" class="btn1"><span> Location</span></a>
+      </div>
+      <div class="info">
+        <i class="fa-regular fa-comments"></i>
+        <br />
+        <h3>Reviews</h3>
+        <p>
+          The most important thing to us is our customers' satisfaction. You can
+          take a look at all the reviews.
+        </p>
+        <a href="#kartice" class="btn1"><span>Comments</span></a>
+      </div>
+    </div>
+
+    <!-- TEXTBOX-->
+    <div id="formular">
+      <form id="form" action="#" onsubmit=" return checkBlank()">
+        <h4>Contact Us!</h4>
+        <div class="inputBox1">
+          <input
+            type="text"
+            name="textbox1"
+            id="fullName"
+            placeholder="Enter your full name. *"
+            onkeydown="validation1()" />
+          <span id="text1"></span>
+        </div>
+        <div class="inputBox2">
+          <input
+            type="text"
+            name="textbox2"
+            id="email"
+            placeholder="Enter your e-mail adress. *"
+            onkeydown="validation2()" />
+          <span id="text2"></span>
+        </div>
+
+        <!-- RADIO BUTTONS-->
+        <div id="radios">
+          <p>Choose your desired consultation.*</p>
+          <div class="radio-container">
+            <div id="radBtn1">
+              <input type="radio" name="radiobutton" id="radio1" />
+              <label for="radio1"> Online consultation</label>
+            </div>
+            <div id="radBtn2">
+              <input type="radio" name="radiobutton" id="radio2" />
+              <label for="radio2"> Consultation in person </label>
+              <span id="text3"></span>
+            </div>
+          </div>
+        </div>
+
+        <!--DROPDOWN USLUGE-->
+        <div id="dropdown">
+          <label for="services">Choose your wished service:</label>
+          <div id="cistac"></div>
+          <select name="services" id="services">
+            <option value="volvo">Furnishing home</option>
+            <option value="saab">3D Visual</option>
+            <option value="opel">Enterior projecting</option>
+          </select>
+        </div>
+        <!-- TEXTBOX MESSAGE-->
+        <div id="cistac"></div>
+        <div id="messages">
+          <p>Enter your message here.</p>
+          <textarea
+            rows="4"
+            cols="50"
+            id="inputBox3"
+            name="message"
+            form="form">
+          </textarea>
+        </div>
+        <input type="submit" id="submitBtn" />
+      </form>
+    </div>
+
+    <!-- REVIEW-->
+    <div id="kartice">
+      <div class="wrapper">
+        <div class="cards">
+          <div class="card">
+            <div class="img">
+              <img src="images/customer1.jpg" alt="Customer 1" />
+            </div>
+            <div class="text">
+              <h2>Mathew Smith, 29</h2>
+              <p>
+                Mathew is a director at a famous IT company, established in
+                2019. Mathew contacted us to help him redesign offices for him
+                and the staff at the building.
+              </p>
+              <div class="more-btn">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+            <div class="more-text">
+              <h2>Mathew Smith</h2>
+              <p>
+                Mathew wanted us to make the office look even more spacious. The
+                main room contains a lot of desks for the staff, but he wanted
+                the minimalistic design with some colors to liven up the
+                workspace. <br />
+              </p>
+              <p>
+                "When I saw the final design, I was in shock! It was everything
+                I looked for and even beyond it. My original idea, but mixed
+                with small details that really made the offices look
+                professional, yet colorful. "
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="images/customer2.jpg" alt="Customer 2" />
+            </div>
+            <div class="text">
+              <h2>Anna Taylor, 22</h2>
+              <p>
+                Keeping in mind that she is a student, Anna had in mind to
+                decorate her small apartment in her own, modern style with
+                details, but to keep it in budget.
+              </p>
+              <div class="more-btn">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+            <div class="more-text">
+              <h2>Anna Taylor</h2>
+              <p>
+                The well organization of the rooms was our main focus. It was
+                important to place everything that was needed, but still
+                maintain the spaciousness of this small flat.
+              </p>
+              <p>
+                "I couldn't believe this was my home. Beauvia did an amazing job
+                organizing my apartment. Even with a small budget and space to
+                work with, they made incredible results."
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="images/customer3.jpg" alt="Customer 3" />
+            </div>
+            <div class="text">
+              <h2>Patricia Williams, 32</h2>
+              <p>
+                Patricia is a work-from-home mother. Since she is mostly at her
+                house using the computer, she wanted to feel comfortable, yet
+                positive in her home office.
+              </p>
+              <div class="more-btn">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+            <div class="more-text">
+              <h2>Patricia Williams</h2>
+              <p>
+                Spending whole day working can be challenging for your
+                productivity. We made sure to bring life in this room and keep
+                it warm and cozy.
+              </p>
+              <p>
+                "Working at a place like this makes me even more hardworking and
+                focused than before. I was surprised by the design and
+                liveliness my office now has. I never knew it could look this
+                good!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mapa">
+      <h3>Find us on this location!</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.3335125266103!2d20.4846909!3d44.8147698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a95dfdba1fb%3A0x7dd3ed9b437a11d6!2sZdravka%20%C4%8Celara%2016%2C%20Beograd%2011000!5e0!3m2!1sen!2srs!4v1671024201588!5m2!1sen!2srs"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+    <div id="footer">
+      <div id="copyright">
+        <p>Beauvia &#174;. All rights reserved.</p>
+      </div>
+      <div id="adresa">
+        <p>ICT College, Zdravka Celara 16, Belgrade</p>
+      </div>
+    </div>
+  </body>
+</html>
